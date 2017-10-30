@@ -76,6 +76,6 @@ function updateRecipe(){
     'ingredients': ingredients
   }
 
-  let template = Handlebars.compile(document.getElementById('recipe-template').innerHTML)
+  let template = handlebars.compile(document.getElementById('recipe-template').innerHTML)
   document.getElementById("main").innerHTML = template(recipe)
 }
