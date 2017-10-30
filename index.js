@@ -19,7 +19,7 @@ function createRecipe(){
   let description = document.getElementById('description').value
   let ingredientNodes = document.getElementsByName('ingredients')
   let ingredients = []
-  
+
   for (let i = 0; i < ingredientNodes.length; i++) {
     if (ingredientNodes[i].value !== "") {
       ingredients.push(ingredientNodes[i].value)
@@ -53,7 +53,7 @@ function displayEditForm(){
     'ingredients': ingredients,
     'submitAction': 'updateRecipe()'
   }
-  
+
   let template = handlebars.compile(document.getElementById("recipe-form-template").innerHTML)
   document.getElementById("main").innerHTML = template(recipe)
 }
@@ -69,13 +69,13 @@ function updateRecipe(){
       ingredients.push(ingredientNodes[i].value)
     }
   }
-  
+
   let recipe = {
     'name': name,
     'description': description,
     'ingredients': ingredients
   }
-  
+
   let template = Handlebars.compile(document.getElementById('recipe-template').innerHTML)
   document.getElementById("main").innerHTML = template(recipe)
 }
