@@ -10,7 +10,7 @@ function init(){
   document.getElementsByTagName('main')[0].innerHTML = form({'submitAction': 'createRecipe()'})
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function(event){
   init()
 })
 
@@ -20,8 +20,8 @@ function createRecipe(){
   let ingredientNodes = document.getElementsByName('ingredients')
   let ingredients = []
 
-  for (let i = 0; i < ingredientNodes.length; i++) {
-    if (ingredientNodes[i].value !== "") {
+  for (let i = 0; i < ingredientNodes.length; i++){
+    if (ingredientNodes[i].value !== ""){
       ingredients.push(ingredientNodes[i].value)
     }
   }
